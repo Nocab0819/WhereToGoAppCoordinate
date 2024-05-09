@@ -1,5 +1,8 @@
 package com.example.WhereToGoApp
 
+import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
@@ -8,6 +11,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.materialIcon
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -20,8 +24,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
+import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
@@ -109,11 +115,36 @@ fun WhereToGoApp(
                 )
             }
             composable(route = WhereToGoAppScreen.Introduction.name) {
+                val context = LocalContext.current
                 IntroductionScreen(
                     subtotal = uiState.placeNumber,
+                    onNextButtonClicked = { coordinate: String ->
+                        openMap(context, coordinate = coordinate)
+                    },
                     modifier = Modifier.fillMaxHeight()
                 )
             }
         }
     }
+}
+
+/*private fun shareOrder(context: Context, coordinate: String) {
+    // Create an ACTION_SEND implicit intent with order details in the intent extras
+    val intent = Intent(Intent.ACTION_SEND).apply {
+        type = "text/plain"
+        putExtra(Intent.EXTRA_TEXT, coordinate)
+    }
+    context.startActivity(
+        Intent.createChooser(
+            intent,
+            context.getString(R.string.name_1)
+        )
+    )
+}*/
+
+private fun openMap(context: Context, coordinate: String) {
+    val gmmIntentUri = Uri.parse(coordinate)
+    val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
+    mapIntent.setPackage("com.google.android.apps.maps")
+    context.startActivity(mapIntent)
 }

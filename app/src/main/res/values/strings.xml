@@ -21,6 +21,8 @@
     <string name="introduction_8">Introduction8</string>
     <string name="introduction_9">Introduction9</string>
     <string name="introduction_10">Introduction10</string>
+    <string name="url_1">geo: 39.9,116.3</string>
     <string name="next">Next</string>
     <string name="back_button">Back</string>
+    <string name="title_activity_maps">MapsActivity</string>
 </resources>
