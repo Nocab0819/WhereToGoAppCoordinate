@@ -63,7 +63,7 @@ fun SelectPlaceButton(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
     cornerRadius: Dp = 8.dp,
-    fontSize: TextUnit = 18.sp
+    fontSize: TextUnit = 21.sp
 ) {
     Button(
         onClick = onClick,

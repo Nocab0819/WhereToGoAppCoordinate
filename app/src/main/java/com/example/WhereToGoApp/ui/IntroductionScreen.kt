@@ -44,16 +44,16 @@ fun IntroductionScreen(
 ) {
     val imageResource = remember(subtotal) {
         when (subtotal) {
-            1 -> PlaceInformation(R.drawable.image_1,R.string.name_1, R.string.introduction_1, "geo: 25.0,121.3")
-            2 -> PlaceInformation(R.drawable.image_2,R.string.name_2, R.string.introduction_2, "geo: 24.6,121.8")
-            3 -> PlaceInformation(R.drawable.image_3,R.string.name_3, R.string.introduction_3, "geo: 39.9,116.3")
-            4 -> PlaceInformation(R.drawable.image_4,R.string.name_4, R.string.introduction_4, "geo: -38,-120")
-            5 -> PlaceInformation(R.drawable.image_5,R.string.name_5, R.string.introduction_5, "geo: 39.9,116.3")
-            6 -> PlaceInformation(R.drawable.image_6,R.string.name_6, R.string.introduction_6, "geo: 39.9,116.3")
-            7 -> PlaceInformation(R.drawable.image_7,R.string.name_7, R.string.introduction_7, "geo: 39.9,116.3")
-            8 -> PlaceInformation(R.drawable.image_8,R.string.name_8, R.string.introduction_8, "geo: 39.9,116.3")
-            9 -> PlaceInformation(R.drawable.image_9,R.string.name_9, R.string.introduction_9, "geo: 39.9,116.3")
-            else -> PlaceInformation(R.drawable.image_10,R.string.name_10, R.string.introduction_10, "geo: 39.9,116.3")
+            1 -> PlaceInformation(R.drawable.image_1,R.string.name_1, R.string.introduction_1, "geo: 22.996911,120.216717")
+            2 -> PlaceInformation(R.drawable.image_2,R.string.name_2, R.string.introduction_2, "geo: 25.017305,121.540132")
+            3 -> PlaceInformation(R.drawable.image_3,R.string.name_3, R.string.introduction_3, "geo: 24.786046,121.000850")
+            4 -> PlaceInformation(R.drawable.image_4,R.string.name_4, R.string.introduction_4, "geo: 25.013404,121.540939")
+            5 -> PlaceInformation(R.drawable.image_5,R.string.name_5, R.string.introduction_5, "geo: 24.795546,120.994930")
+            6 -> PlaceInformation(R.drawable.image_6,R.string.name_6, R.string.introduction_6, "geo: 24.968189,121.195202")
+            7 -> PlaceInformation(R.drawable.image_7,R.string.name_7, R.string.introduction_7, "geo: 24.987465,121.576510")
+            8 -> PlaceInformation(R.drawable.image_8,R.string.name_8, R.string.introduction_8, "geo: 25.026435,121.527563")
+            9 -> PlaceInformation(R.drawable.image_9,R.string.name_9, R.string.introduction_9, "geo: 25.174190,121.447222")
+            else -> PlaceInformation(R.drawable.image_10,R.string.name_10, R.string.introduction_10, "geo: 23.558995,120.472181")
         }
     }
     Box(
@@ -95,9 +95,9 @@ fun IntroductionScreen(
                     .background(color = MaterialTheme.colorScheme.secondary)
                     .padding(horizontal = 3.dp, vertical = 8.dp)
                     .fillMaxWidth(),
-                fontSize = 28.sp,
+                fontSize = 18.sp,
                 color = MaterialTheme.colorScheme.onSecondary,
-                textAlign = TextAlign.Center,
+                textAlign = TextAlign.Start,
                 maxLines = Int.MAX_VALUE,
                 lineHeight = 40.sp
             )
