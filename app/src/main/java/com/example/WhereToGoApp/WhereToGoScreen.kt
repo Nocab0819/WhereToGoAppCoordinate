@@ -128,20 +128,6 @@ fun WhereToGoApp(
     }
 }
 
-/*private fun shareOrder(context: Context, coordinate: String) {
-    // Create an ACTION_SEND implicit intent with order details in the intent extras
-    val intent = Intent(Intent.ACTION_SEND).apply {
-        type = "text/plain"
-        putExtra(Intent.EXTRA_TEXT, coordinate)
-    }
-    context.startActivity(
-        Intent.createChooser(
-            intent,
-            context.getString(R.string.name_1)
-        )
-    )
-}*/
-
 private fun openMap(context: Context, coordinate: String) {
     val gmmIntentUri = Uri.parse(coordinate)
     val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
