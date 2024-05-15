@@ -35,7 +35,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.WhereToGoApp.R
 import com.example.WhereToGoApp.data.PlaceInformation
-import com.example.WhereToGoApp.ui.theme.WhereToGoAppTheme
+import com.example.compose.WhereToGoAppTheme
 
 @Composable
 fun IntroductionScreen(
