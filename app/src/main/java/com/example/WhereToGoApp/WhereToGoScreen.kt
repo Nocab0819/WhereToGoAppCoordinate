@@ -99,7 +99,6 @@ fun WhereToGoApp(
             startDestination = WhereToGoAppScreen.Start.name,
             modifier = Modifier
                 .fillMaxSize()
-                .verticalScroll(rememberScrollState())
                 .padding(innerPadding)
         ) {
             composable(route = WhereToGoAppScreen.Start.name) {

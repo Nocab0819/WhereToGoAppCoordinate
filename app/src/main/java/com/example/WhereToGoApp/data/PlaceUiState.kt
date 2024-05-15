@@ -14,3 +14,9 @@ data class PlaceInformation(
     @StringRes val introductionResourceId: Int,
     val url: String,
 )
+
+data class PlaceNumber(
+    @DrawableRes val imageId: Int,
+    @StringRes val nameId: Int,
+    val number: Int,
+)
